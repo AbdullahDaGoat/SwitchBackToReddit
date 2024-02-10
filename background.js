@@ -1,4 +1,4 @@
-const original_url = "https://sh.reddit.com"
+const original_url = "https://new.reddit.com"
 
 chrome.action.onClicked.addListener((tab) => {
   const url = new URL(tab.url);

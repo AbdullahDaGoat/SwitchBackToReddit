@@ -7,7 +7,7 @@ StopRedditRedesign is a Chrome extension that allows you to switch between the R
 ## How to Use
 
 1. Download the Extension
-   - Click on the **Code** button and select **Download ZIP** to download the extension as a zip file.
+   - Click on the **Code** button and select **Download ZIP** to download the extension as a zip file. Make sure to extract it aswell
 2. Enable Developer Mode
    - Open Chrome and navigate to `chrome://extensions`.
    - Enable **Developer mode** using the toggle switch in the top-right corner.

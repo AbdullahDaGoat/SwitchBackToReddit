@@ -21,6 +21,14 @@ StopRedditRedesign is a Chrome extension that allows you to switch between the R
 5. Start Exploring!
    - Click on the extension icon in the toolbar to switch between old and new Reddit versions. New Reddit will load on the `sh.reddit.com` subdomain.
 
+Fun Fact: If your on normal reddit and wanna use an different version of reddit all the time by the extension then just go into the background.js of the code (which you can open when you download the code in an ide or editor) and change the original_url to the according subdomain 
+
+```
+const original_url = "https://new.reddit.com";
+
+```
+> Change that ^^^
+
 ## Privacy and Data Collection
 
 - This extension does not collect, store, or distribute any user data. All data is stored locally on your computer using the browser's local storage, which can be cleared by clearing cache and cookies.
@@ -51,5 +59,7 @@ so it becomes "git push -u origin main-actual"
 
 if you know how to fix that well tell me cause im dumb :D
 
+If you recieve an error about local storage you can ignore it
+
 ## Todo:
-1. Well the checkbox doent actually do anything in the options section, its just if u click the extension so fix that i guess 
+1. Well the checkbox doent actually do anything in the options section, its just if u click the extension so fix that i guess that is also causing the Add event listener bug 

@@ -1,6 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector("#new-reddit-toggle");
-  toggle.addEventListener("change", () => {
-    chrome.runtime.sendMessage({ action: "toggleNewReddit" });
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  const newRedditToggle = document.getElementById("new-reddit-toggle");
+  if (newRedditToggle) {
+    newRedditToggle.addEventListener("change", () => {
+      chrome.runtime.sendMessage({ action: "toggleNewReddit" });
+    });
+  }
 });

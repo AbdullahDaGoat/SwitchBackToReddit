@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Cool Extension",
+  "name": "StopRedditRedesign",
   "description": "Switch to new.reddit.com and toggle between old and new Reddit.",
   "version": "1.0",
   "action": {
@@ -9,7 +9,7 @@
       "48": "icon.png",
       "128": "icon.png"
     },
-    "default_title": "Enable New Reddit"
+    "default_title": "Switch back to normal Reddit"
   },
   "permissions": ["tabs"],
   "options_ui": {

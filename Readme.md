@@ -1,8 +1,8 @@
-# Cool Extension
+# Stop Reddit Redesign
 
 ![Extension Icon](icon.png)
 
-Switch back to Reddit is a Chrome extension that allows you to switch between the R3 rediesgn which can be found as `sh.reddit.com` and original Reddit `new.reddit.com` versions effortlessly. It provides a convenient toggle to switch to the new.reddit.com subdomain and back to the new Reddit interface.
+StopRedditRedesign is a Chrome extension that allows you to switch between the R3 rediesgn which can be found as `sh.reddit.com` and original Reddit `new.reddit.com` versions effortlessly. It provides a convenient toggle to switch to the new.reddit.com subdomain and back to the new Reddit interface.
 
 ## How to Use
 
@@ -28,7 +28,7 @@ Switch back to Reddit is a Chrome extension that allows you to switch between th
 
 ## About the Developer
 
-Cool Extension was created by u/Amanwhlikestoargue. If you have any questions, feedback, or suggestions, feel free to reach out to the developer.
+StopRedditRedesign was created by u/Amanwhlikestoargue. If you have any questions, feedback, or suggestions, feel free to reach out to the developer.
 The developer has also created a subreddit called r/notoredditredesign, where you can discuss the extension and provide feedback but also show Reddit how much we hate there idea for a new Reddit design.
 
 ## Reverting to Previous Reddit

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Cool Extension",
+  "description": "Switch to new.reddit.com and toggle between old and new Reddit.",
+  "version": "1.0",
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_title": "Enable New Reddit"
+  },
+  "permissions": ["tabs"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -17,6 +17,7 @@ Switch back to Reddit is a Chrome extension that allows you to switch between th
 4. Customize Extension Settings (Optional)
    - Once the extension is loaded, you can access it by clicking the extension itself
    - Adjust the settings as desired in the `chrome://extensions` area, such as allowing in incognito mode or accessing search page results (which we highly recomend for optimal performance).
+6. Make sure to pin the Extension :)
 5. Start Exploring!
    - Click on the extension icon in the toolbar to switch between old and new Reddit versions. New Reddit will load on the `sh.reddit.com` subdomain.
 
@@ -49,3 +50,6 @@ To anyone contributing, idk if this matters but I accidentally set the main bran
 so it becomes "git push -u origin main-actual"
 
 if you know how to fix that well tell me cause im dumb :D
+
+## Todo:
+1. Well the checkbox doent actually do anything in the options section, its just if u click the extension so fix that i guess 

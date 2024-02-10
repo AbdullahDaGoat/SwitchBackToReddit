@@ -41,3 +41,11 @@ This project is still under development, and we will regularly release updates. 
 None of the icon images used are mine, I grabbed them from the internet!
 
 Enjoy using this absolute dogshit of an extension that I made in less than a day and probably has a bunch of bugs that I will have to fix and have a great Reddit browsing experience!
+
+## Note:
+
+To anyone contributing, idk if this matters but I accidentally set the main branch as main-actual so when you commit the main branch is now called main-actual just an FYI
+
+so it becomes "git push -u origin main-actual"
+
+if you know how to fix that well tell me cause im dumb :D

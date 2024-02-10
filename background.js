@@ -1,20 +1,32 @@
-const original_url = "https://new.reddit.com";
+const redditUrl = "https://new.reddit.com";
 
-chrome.action.onClicked.addListener((tab) => {
-  const url = new URL(tab.url);
-  const newUrl = original_url + url.pathname + url.search + url.hash;
-  chrome.tabs.update(tab.id, { url: newUrl });
-});
+function updateTabUrl(tabId, url) {
+  const newUrl = new URL(url, redditUrl).href;
+  chrome.tabs.update(tabId, { url: newUrl });
+}
 
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+function validateUrl(url) {
+  try {
+    new URL(url);
+    return true;
+  } catch (e) {
+    if (e instanceof TypeError) {
+      console.error("Invalid URL:", url);
+    } else {
+      console.error("Unknown error validating URL:", url);
+    }
+    return false;
+  }
+}
+
+chrome.action.onClicked((tab) => updateTabUrl(tab.id, new URL(tab.url)));
+
+chrome.tabs.onUpdated((tabId, changeInfo, tab) => {
   if (changeInfo.status === "complete" && /^https?:\/\/www\.reddit\.com/.test(tab.url)) {
-    chrome.storage.local.get("newReddit", ({ newReddit }) => {
-      const isNewReddit = newReddit === true;
-      if (isNewReddit) {
+    chrome.storage.local.get("newReddit", (result) => {
+      if (result.newReddit) {
         chrome.action.setIcon({ path: "icon-on.png", tabId: tabId });
-        const url = new URL(tab.url);
-        const newUrl = original_url + url.pathname + url.search + url.hash;
-        chrome.tabs.update(tabId, { url: newUrl });
+        updateTabUrl(tabId, new URL(tab.url));
       } else {
         chrome.action.setIcon({ path: "icon-off.png", tabId: tabId });
       }
@@ -22,12 +34,17 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage((request, sender, sendResponse) => {
   if (request.action === "toggleNewReddit") {
     chrome.storage.local.get("newReddit", ({ newReddit }) => {
       const updatedValue = !newReddit;
-      chrome.storage.local.set({ newReddit: updatedValue });
-      sendResponse({ success: true });
+      chrome.storage.local.set({ newReddit: updatedValue }, () => {
+        sendResponse({ success: true });
+      });
     });
   }
 });
+
+if (!validateUrl(redditUrl)) {
+  console.error("Invalid redditUrl:", redditUrl);
+}

@@ -3,96 +3,15 @@
 
 <head>
     <title>Reddit URL Changer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <style>
-        body {
-            color: white;
-            background-color: black;
-            padding: 20px;
-            width: 400px;
-            height: 250px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        select {
-            display: block;
-            width: 100%;
-            margin-bottom: 20px;
-            padding: 5px;
-            font-size: 16px;
-        }
-
-        #save-button {
-            padding: 8px 16px;
-            font-size: 16px;
-            background-color: orange;
-            color: white;
-        }
-
-        #error-message {
-            color: red;
-            display: none;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-          body.light-mode {
-            color: black;
-            background-color: white;
-            }
-
-            .light-mode #save-button {
-                background-color: blue;
-                color: white;
-            }
-
-        .light-mode {
-            color: black;
-            background-color: white;
-        }
-
-        .toggle-container {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 9999;
-            cursor: pointer;
-        }
-
-        .toggle-container i {
-            font-size: 24px;
-        }
-
-        .light-mode i {
-            color: yellow;
-        }
-
-        a{
-            color: white;
-        }
-
-        .light-mode a {
-            color: black;
-        }
-
-        .lastspan {
-            padding-bottom: 20px;
-            text-align: center;
-        }
-
-        .Terms{
-            color: purple'
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="options.js"></script>
+    <link rel="icon" href="icon.png" type="image/x-icon" />
 </head>
 
 <body>
     <div class="toggle-container">
-        <i id="toggle-icon" class="fas fa-lightbulb"></i>
+        <i id="toggle-icon" class="fas fa-lightbulb" title="Toggle Reddit URL"></i>
     </div>
 
     <h1>Reddit URL Changer</h1>
@@ -102,18 +21,20 @@
         <option value="https://new.reddit.com">R2 Normal Reddit</option>
         <option value="https://sh.reddit.com">R3 Reddit Redesign</option>
     </select>
-    <button id="save-button">Save</button>
+    <h2>or</h2>
+    <input type="text" id="custom-url" placeholder="Enter a custom Reddit domain" />
+    <button id="add-custom-url" type="button">Add</button>
     <br>
-    <span id="error-message" style="color: red; display: none;"> ERROR: You are not on reddit.com. Click
-        <a href="http://www.reddit.com" target="_blank">this link</a> to go there, then click the
-        extension again :)</span>
+    <button id="save-button">Save and Apply</button>
+    <br>
+    <span id="error-message" style="color: red; display: none;"> ERROR: You are not on reddit.com. Click <a href="http://www.reddit.com" target="_blank">this link</a> to go there, then click the extension again :)</span>
     <br/>
-    <span class="Terms"> <a href="terms.html">Terms and Conditons</a></span>
+    <span> <a href="terms.html" class="terms" title="Terms and Conditions">Terms and Conditons</a></span>
     <br/>
     <br/>
     <span class="lastspan"><a href="mailto:abdullahaviator13@gmail.com" target="_blank">Contact the Developer for Feedbacks and Concerns</a></span>   
     <br/>
-    <a href="https://github.com/AbdullahDaGoat/SwitchBackToReddit" class="lastspan" >Github Repository</a>
+    <a href="https://github.com/AbdullahDaGoat/SwitchBackToReddit" class="lastspan" title="Github Repository">Github Repository</a>
     <script src="options.js" type="text/javascript" async> </script>
 </body>
 

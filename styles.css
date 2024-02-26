@@ -1,0 +1,197 @@
+/* Global styles */
+body {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+  }
+  
+  /* Header */
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Form elements */
+  select {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  #save-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: 2px solid orange;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  #save-button:hover {
+    border: none;
+    outline: none;
+    background: orange;
+    color: white;
+  }
+  
+  #error-message {
+    color: red;
+    display: none;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  /* Light mode styles */
+  body.light-mode {
+    color: black;
+    background-color: white;
+  }
+  
+  body.light-mode #reddit-url {
+    outline-color: blue;
+  }
+  
+  body.light-mode #save-button {
+    background-color: blue;
+    color: white;
+  }
+  
+  /* Toggle container */
+  .toggle-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    cursor: pointer;
+  }
+  
+  .toggle-container i {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .light-mode .toggle-container i {
+    color: yellow;
+  }
+  
+  .toggle-container i:hover {
+    color: yellow;
+  }
+  
+  .light-mode .toggle-container i:hover {
+    color: black;
+  }
+  
+  /* Links */
+  a {
+    color: white;
+  }
+  
+  .light-mode a {
+    color: black;
+  }
+  
+  /* Footer */
+  .lastspan {
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  
+  a:hover {
+    color: purple;
+  }
+
+  /* Style the select element */
+#reddit-url {
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    outline: 2px solid orange;
+    outline-offset: -2px;
+    transition: outline-offset 0.2s ease-in-out;
+  }
+
+  #reddit-url:focus {
+    outline-offset: 4px;
+  }
+  
+  /* Style the options */
+  #reddit-url option {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  /* Style the selected option */
+  #reddit-url option:checked {
+    background-color: #ccc;
+  }
+  
+  /* Move the dropdown arrow to the right and down */
+  #reddit-url::-ms-expand {
+    margin-left: auto;
+    margin-top: 5px;
+  }
+  
+  /* Style the dropdown arrow for other browsers */
+  #reddit-url::after {
+    content: "\25BC";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+    color: #ccc;
+  }
+
+/* Custom URL Input */
+#custom-url {
+  width: 320px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  outline: 2px solid orange;
+  outline-offset: -2px;
+  transition: outline-offset 0.2s ease-in-out;
+}
+
+#custom-url:focus {
+  outline-offset: 4px;
+}
+
+
+/* Add Custom URL Button */
+#add-custom-url {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  border: 2px solid orange;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Hover effect for Add Custom URL Button */
+#add-custom-url:hover {
+  border: none;
+  outline: none;
+  background: orange;
+  color: white;
+}

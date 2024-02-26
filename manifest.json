@@ -1,13 +1,37 @@
 {
   "manifest_version": 3,
-  "name": "Url Changer",
-  "version": "1.0",
+  "name": "Reddit URL Changer",
+  "version": "3.0",
   "action": {
     "default_popup": "options.html"
   },
   "permissions": [
     "activeTab",
     "tabs",
-    "storage"
-  ]
+    "storage",
+    "webRequest",
+    "declarativeContent",
+    "contextMenus",
+    "unlimitedStorage"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+      "persistent": true
+   },
+
+   "content_scripts": [
+    {
+      "matches": ["https://www.reddit.com/*"],
+      "js": ["options.js"]
+    }
+  ],
+
+  "host_permissions": [
+    "https://www.reddit.com/*"
+  ],
+  "options_ui": {
+    "page": "terms.html"
+  },
+  "icon": "icon.png"
 }

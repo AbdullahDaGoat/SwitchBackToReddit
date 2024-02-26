@@ -2,6 +2,11 @@
   "manifest_version": 3,
   "name": "Reddit URL Changer",
   "version": "3.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
   "action": {
     "default_popup": "options.html"
   },
@@ -14,14 +19,12 @@
     "contextMenus",
     "unlimitedStorage"
   ],
-
-   "content_scripts": [
+  "content_scripts": [
     {
       "matches": ["https://www.reddit.com/*"],
       "js": ["options.js"]
     }
   ],
-
   "host_permissions": [
     "https://www.reddit.com/*"
   ],

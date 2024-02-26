@@ -7,7 +7,7 @@ function validateUrl() {
     const errorElement = document.getElementById("error-message");
     const dropdown = document.getElementById("reddit-url");
 
-    if (!url.startsWith("https://www.reddit.com")) {
+    if (!url.includes("reddit.com")) {
       errorElement.style.display = "block";
       dropdown.disabled = true;
       saveButton.disabled = true;
@@ -15,6 +15,7 @@ function validateUrl() {
   });
 }
 
+// ...rest of the code remains the same
 function redirectUrl() {
   saveButton.addEventListener("click", () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {

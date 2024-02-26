@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-        const saveButton = document.getElementById("save-button")
+  const saveButton = document.getElementById("save-button")
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const url = tabs[0].url;
     const errorElement = document.getElementById("error-message")

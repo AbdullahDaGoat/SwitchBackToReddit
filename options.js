@@ -24,7 +24,6 @@ function redirectUrl() {
       const newUrl = document.getElementById("reddit-url").value + newPath;
       const redirectUrl = newUrl.replace(domain, "");
       chrome.tabs.update(tabs[0].id, { url: redirectUrl });
-      chrome.windows.remove(tabs[0].windowId);
     });
   });
 }

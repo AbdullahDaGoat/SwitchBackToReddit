@@ -14,25 +14,19 @@ function validateUrl() {
   });
 }
 
-// URL Redirection (should be handled in background.js)
-// function redirectUrl() {
-//   saveButton.addEventListener("click", () => {
-//     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-//       const currentUrl = tabs[0].url;
-//       const domain = currentUrl.split("/")[2];
-//       const newPath = currentUrl.substring(currentUrl.indexOf("/", 8));
-//       const newUrl = document.getElementById("reddit-url").value + newPath;
-//       const redirectUrl = newUrl.replace(domain, "");
-//       chrome.tabs.update(tabs[0].id, { url: redirectUrl });
-//       chrome.windows.remove(tabs[0].windowId);
-//     });
-//   });
-// }
-
-document.getElementById("reddit-url").addEventListener("change", (event) => {
-  const newUrl = event.target.value;
-  chrome.runtime.sendMessage({ type: "redirect", url: newUrl });
-});
+function redirectUrl() {
+  saveButton.addEventListener("click", () => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      const currentUrl = tabs[0].url;
+      const domain = currentUrl.split("/")[2];
+      const newPath = currentUrl.substring(currentUrl.indexOf("/", 8));
+      const newUrl = document.getElementById("reddit-url").value + newPath;
+      const redirectUrl = newUrl.replace(domain, "");
+      chrome.tabs.update(tabs[0].id, { url: redirectUrl });
+      chrome.windows.remove(tabs[0].windowId);
+    });
+  });
+}
 
 // Theme Toggling
 function toggleTheme() {

@@ -1,19 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit URL Changer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        body {
+            color: white;
+            background-color: black;
+            padding: 20px;
+            width: 300px;
+            height: 250px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        #save-button {
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: orange;
+            color: white;
+        }
+
+        #error-message {
+            color: red;
+            display: none;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+          body.light-mode {
+            color: black;
+            background-color: white;
+            }
+
+            .light-mode #save-button {
+                background-color: blue;
+                color: white;
+            }
+
+        .light-mode {
+            color: black;
+            background-color: white;
+        }
+
+        .toggle-container {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        .toggle-container i {
+            font-size: 24px;
+        }
+
+        .light-mode i {
+            color: yellow;
+        }
+
+        a{
+            color: white;
+        }
+
+        .light-mode a {
+            color: black;
+        }
+    </style>
     <script src="options.js"></script>
 </head>
 
 <body>
-    <h1>StopRedditRedesign</h1>
+    <div class="toggle-container">
+        <i id="toggle-icon" class="fas fa-lightbulb"></i>
+    </div>
 
-    <label for="new-reddit-toggle">
-        <input type="checkbox" id="new-reddit-toggle">
-        Switch back to normal Reddit
-    </label>
+    <h1>Reddit URL Changer</h1>
+    <p>Choose your preferred Reddit URL:</p>
+    <select id="reddit-url">
+        <option value="https://old.reddit.com">R1 Old Reddit</option>
+        <option value="https://new.reddit.com">R2 Normal Reddit</option>
+        <option value="https://sh.reddit.com">R3 Reddit Redesign</option>
+    </select>
+    <button id="save-button">Save</button>
+    <br>
+    <span id="error-message" style="color: red; display: none;"> ERROR: You are not on reddit.com. Click
+        <a href="http://www.reddit.com" target="_blank">this link</a> to go there, then click the
+        extension again :)</span>
+
+    <script src="options.js"></script>
 </body>
 
 </html>

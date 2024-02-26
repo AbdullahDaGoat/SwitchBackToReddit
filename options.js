@@ -1,6 +1,7 @@
 // URL Validation and Error Handling
+const saveButton = document.getElementById("save-button");
+
 function validateUrl() {
-  const saveButton = document.getElementById("save-button");
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const url = tabs[0].url;
     const errorElement = document.getElementById("error-message");

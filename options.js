@@ -15,7 +15,6 @@ function validateUrl() {
   });
 }
 
-// ...rest of the code remains the same
 function redirectUrl() {
   saveButton.addEventListener("click", () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {

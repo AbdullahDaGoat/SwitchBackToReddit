@@ -77,7 +77,7 @@ function handleCustomUrl() {
 // Initialize the functions
 document.addEventListener("DOMContentLoaded", () => {
   validateUrl();
-  // redirectUrl(); now handled in background.js
+  redirectUrl(); 
   toggleTheme();
   handleCustomUrl();
 });

@@ -4,7 +4,7 @@ body {
     background-color: black;
     padding: 20px;
     width: 400px;
-    height: 300px;
+    height: 350px;
     font-family: 'Helvetica', 'Arial', sans-serif;
   }
   
@@ -221,3 +221,37 @@ body {
   color: white;
 }
 
+/* Reset All Button Styling */
+#reset-all-button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: 2px solid orange;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Light Mode Styling for Reset All Button */
+.light-mode #reset-all-button {
+  background-color: white;
+  color: black;
+  border: 2px solid blue;
+}
+
+/* Hover Effect for Reset All Button */
+#reset-all-button:hover {
+  border: none;
+  outline: none;
+  background: orange;
+  color: white;
+}
+
+/* Light Mode Hover Effect for Reset All Button */
+.light-mode #reset-all-button:hover {
+  background-color: blue;
+  color: white;
+}

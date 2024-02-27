@@ -1,3 +1,4 @@
+// Store the last 10 URLs no more to ensure excess memory isnt lost
 let urlHistory = [];
 
 // Listen for back button clicks
@@ -23,6 +24,12 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
 chrome.webNavigation.onCompleted.addListener(function(details) {
   // Add the current URL to the history
   if (details.frameId === 0) {
+    // If the history is already at the maximum length, remove the oldest URL
+    if (urlHistory.length >= 10) {
+      urlHistory.shift();
+    }
+
+    // Add the new URL to the history
     urlHistory.push(details.url);
   }
 });

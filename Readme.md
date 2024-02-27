@@ -32,6 +32,23 @@ This extension was created by Abdullah Khan.
 
 I created this because I saw reddit changing and doingng a R3 rdesign and everyone elses chrome extensions sucks. There were bugs, errors, and the UI was terrible and it annoyed me so i made my own
 
+I have used AI to ensure readibility and coherence in my code so other developers know what I am doing
+
+## Why Choose Us
+
+1. Cleaner UI, simpler and better!
+2. Dyanamic Duo (Dark and Light-Mode)
+3. Custom Url additon and saved so you can use (coming soon!)
+4. Transparency of everything (we dont collect ANYTHING!!)
+5. Transparency in code, anyone can contribute, or view the code. We arent hiding anything (increased trust!)
+6. Always having support, developer will try his best to add a lot of ideas.
+7. Accessible to everyone by using latest HTML, and CSS accessibility options with processed well javascript 
+8. We dont collect, store or use any of your data!
+9. Back button on other chrome extensions dont work due to the domain diffculty, our extension remember your last 10 urls LOCALLY and when you click back button puts them there so you dont have to feel frustrated using the new domain (seemless integration)
+10. Contact the developer at any time!!
+11. Extensive R & D to ensure 100% consistency
+
+
 ## Code Overview
 
 ### `manifest.json`

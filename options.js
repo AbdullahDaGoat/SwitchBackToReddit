@@ -97,8 +97,14 @@ function redirectUrl() {
           newUrl = document.getElementById("reddit-url").value + newPath;
         }
 
-        const redirectUrl = newUrl;
-        chrome.tabs.update(tabs[0].id, { url: redirectUrl });
+        chrome.tabs.update(tabs[0].id, { url: newUrl });
+
+        // Add the new URL to the history
+        const backgroundPage = chrome.runtime.getBackgroundPage();
+        if (backgroundPage.urlHistory.length >= 10) {
+          backgroundPage.urlHistory.shift();
+        }
+        backgroundPage.urlHistory.push(newUrl);
       });
     });
   });

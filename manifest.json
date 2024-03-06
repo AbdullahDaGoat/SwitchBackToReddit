@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Reddit URL Changer",
-  "version": "4.0",
+  "version": "5.0",
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
@@ -30,7 +30,7 @@
     "https://www.reddit.com/*"
   ],
   "options_ui": {
-    "page": "terms.html"
+    "page": "settings.html"
   },
     "background": {
     "scripts": ["background.js"]

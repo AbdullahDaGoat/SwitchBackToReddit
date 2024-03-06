@@ -18,6 +18,10 @@ To change the URL of a Reddit page, simply navigate to the page and open the ext
 
 If you want to use a custom URL, enter it in the "Enter a custom Reddit domain" input field and click the "Add" button. The custom URL will be added to the dropdown menu for future use.
 
+# Please Note
+For this code to function properly as soon as you land on reddit.com you must initalize the chrome extension 
+
+
 ## Contributing
 
 If you want to contribute to this extension, feel free to open a pull request or submit an issue. Please make sure to follow the code style and conventions used in this repository.
@@ -38,16 +42,14 @@ I have used AI to ensure readibility and coherence in my code so other developer
 
 1. Cleaner UI, simpler and better!
 2. Dyanamic Duo (Dark and Light-Mode)
-3. Custom Url additon and saved so you can use (coming soon!)
+3. Custom Url additon and saved so you can use it!
 4. Transparency of everything (we dont collect ANYTHING!!)
 5. Transparency in code, anyone can contribute, or view the code. We arent hiding anything (increased trust!)
 6. Always having support, developer will try his best to add a lot of ideas.
-7. Accessible to everyone by using latest HTML, and CSS accessibility options with processed well javascript 
-8. We dont collect, store or use any of your data!
+7. Accessible to everyone by using latest HTML, and CSS accessibility options with well processed javascript 
 9. Back button on other chrome extensions dont work due to the domain diffculty, our extension remember your last 10 urls LOCALLY and when you click back button puts them there so you dont have to feel frustrated using the new domain (seemless integration)
-10. Contact the developer at any time!!
+10. Save a default url in the options page so that automatically when you go on reddit.com you can go on to the current page 
 11. Extensive R & D to ensure 100% consistency
-
 
 ## Code Overview
 
